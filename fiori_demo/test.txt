@@ -12,3 +12,4 @@ hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 changes all
+chagne to remote repository https://github.com/wangynh/sapdev.git
