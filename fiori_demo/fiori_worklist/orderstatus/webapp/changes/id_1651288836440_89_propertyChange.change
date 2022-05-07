@@ -1,0 +1,41 @@
+{
+    "fileName": "id_1651288836440_89_propertyChange",
+    "fileType": "change",
+    "changeType": "propertyChange",
+    "moduleName": "",
+    "reference": "nw.orderstatus",
+    "packageName": "",
+    "content": {
+        "property": "showTablePersonalisation",
+        "newValue": true
+    },
+    "selector": {
+        "id": "nw.orderstatus::sap.suite.ui.generic.template.ListReport.view.ListReport::Orders--listReport",
+        "idIsLocal": false,
+        "type": "sap.ui.comp.smarttable.SmartTable"
+    },
+    "layer": "CUSTOMER_BASE",
+    "texts": {},
+    "namespace": "apps/nw.orderstatus/changes/",
+    "projectId": "",
+    "creation": 1651288836440,
+    "originalLanguage": "",
+    "support": {
+        "generator": "changeUtils: SAPFioriTools",
+        "service": "",
+        "user": "",
+        "sapui5Version": "1.100.2",
+        "sourceChangeFileName": "",
+        "compositeCommand": ""
+    },
+    "oDataInformation": {},
+    "dependentSelector": {},
+    "validAppVersions": {
+        "from": "0.0.1",
+        "to": "0.0.1",
+        "creation": "0.0.1"
+    },
+    "jsOnly": false,
+    "variantReference": "",
+    "appDescriptorChange": false
+}

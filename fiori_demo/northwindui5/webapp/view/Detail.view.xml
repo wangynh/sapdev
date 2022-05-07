@@ -1,0 +1,29 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="DetailView" controllerName="fiori.northwindui5.controller.Detail" displayBlock="true">
+
+    <Page id="detail" title="{i18n>DetailTitle}" showNavButton="true" navButtonPress="handleNavButtonPress">
+        <ObjectHeader id="id_objheader" title="{ProductName}" number="{= ((${UnitPrice} * 100) / 100 ).toFixed(2) }"  numberUnit="{i18n>Currency}">
+            <statuses>
+                    <ObjectStatus id="id_objstat1" text="{= ${Discontinued} ? ${i18n>Discontinued} : ${i18n>Available} }" state="{= ${Discontinued} ? 'Error' : 'Success' }"/>
+                    <ObjectStatus id="id_objstat2" text="{= (${UnitsOnOrder} > 0) ?  ${i18n>Ordered} : ${i18n>NotOrdered} }" state="Success"/>
+            </statuses>
+            <attributes>
+                    <ObjectAttribute id="id_objattr_prodid" text="Product #{ProductID}"/>
+                    <ObjectAttribute id="id_objattr_category" text="Category #{CategoryID}"/>
+                    <ObjectAttribute id="id_objattr_suppid" text="Supplier #{SupplierID}"/>
+            </attributes>
+        </ObjectHeader>
+		<footer>
+			<Bar id="id_bardetail">
+				<contentRight>
+					<Button id="id_btn_handleorder" text="{i18n>OrderButtonText}" type="Accept" icon="sap-icon://accept" press="handleOrder"/>
+				</contentRight>
+			</Bar>
+		</footer>
+        <headerContent>
+            <sap.ushell.ui.footerbar:AddBookmarkButton xmlns:sap.ushell.ui.footerbar="sap.ushell.ui.footerbar" text="Bookmark" icon="sap-icon://add-favorite" id="button1"/>
+        </headerContent>
+
+    <content/>
+
+    </Page>
+</mvc:View>

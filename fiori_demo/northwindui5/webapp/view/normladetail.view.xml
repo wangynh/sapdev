@@ -1,0 +1,26 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="DetailView" controllerName="fiori.northwindui5.controller.Detail" displayBlock="true">
+
+    <Page id="detail" title="{i18n>DetailTitle}" showNavButton="true" navButtonPress="handleNavButtonPress">
+        <VBox id="idvbox">
+            <Text id="text1" wrapping="false" text="ProductName:{ProductName}"/>
+            <Text id="txtproductid" text="ID:{ProductID}"/>
+            <Button xmlns="sap.m" text="Back" id="button0" activeIcon="sap-icon://arrow-left" icon="sap-icon://nav-back"/>
+            <Text id="text2" wrapping="false" text="{UnitPrice}"/>
+            <Text id="text3" wrapping="false" text="{QuantityPerUnit}"/>
+            <Text id="text4" wrapping="false" text="{ProductName}"/>
+      
+        </VBox>
+        <Link xmlns="sap.m" href="https://ui5.sap.com" text="Link to UI5 Sample" id="link0"/>
+        <HBox width="100%" id="hbox0">
+            <items><sap.ui.core:Icon xmlns:sap.ui.core="sap.ui.core" src="sap-icon://display" size="1em" id="icon0"/>
+                <Text xmlns="sap.m" text="{ProductName}" id="text1_1651367343531"/>
+            </items>
+        </HBox>
+        <headerContent>
+            <sap.ushell.ui.footerbar:AddBookmarkButton xmlns:sap.ushell.ui.footerbar="sap.ushell.ui.footerbar" text="Bookmark" icon="sap-icon://add-favorite" id="button1"/>
+        </headerContent>
+
+    <content/>
+
+    </Page>
+</mvc:View>

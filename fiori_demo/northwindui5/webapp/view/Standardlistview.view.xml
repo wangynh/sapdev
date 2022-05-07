@@ -1,0 +1,10 @@
+<mvc:View id="ListView" controllerName="fiori.northwindui5.controller.List" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page id="listPage" title="{i18n>ListTitle}">
+   
+         <List id="list" items="{/Products}">
+            <StandardListItem id="itemproduct" type="Navigation" press="handleListItemPress" title="{ProductName}"/>
+
+        </List>
+
+    </Page>
+</mvc:View>

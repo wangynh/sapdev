@@ -1,0 +1,28 @@
+<mvc:View id="ListView" controllerName="fiori.northwindui5.controller.List" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page id="listPage" title="{i18n>ListTitle}">
+        <subHeader>
+			<Bar id="idbar">
+				<contentLeft>
+					<SearchField search="handleSearch"/>
+				</contentLeft>
+			</Bar>
+		</subHeader>    
+   
+         <List id="list" items="{/Products}">
+            <ObjectListItem id="itemproduct" type="Navigation" press="handleListItemPress" 
+                   title="{ProductID}:{ProductName}" number ="{= ((${UnitPrice} * 100) / 100).toFixed(2) }" numberUnit="{i18n>Currency}">
+				<attributes>
+					<ObjectAttribute id="id_objectattr" text="{QuantityPerUnit}"/>
+				</attributes>
+				<firstStatus>
+					<ObjectStatus id="id_objectstatus" text="{= ${Discontinued} ? ${i18n>Discontinued} : ${i18n>Available} }"  state="{= ${Discontinued}? 'Error' : 'Success' }"/>
+				</firstStatus>                
+
+            </ObjectListItem>
+        </List>
+        <headerContent>
+            <sap.ushell.ui.footerbar:AddBookmarkButton xmlns:sap.ushell.ui.footerbar="sap.ushell.ui.footerbar" text="Bookmark" icon="sap-icon://add-favorite" id="button_bookmark"/>
+        </headerContent>        
+
+    </Page>
+</mvc:View>
